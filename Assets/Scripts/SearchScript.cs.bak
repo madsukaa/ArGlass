@@ -1,0 +1,84 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class SearchScript : MonoBehaviour
+{
+	[SerializeField]
+	private InputField searchInput;
+	
+	[SerializeField]
+	private Button tomford;
+	
+	[SerializeField]
+	private Button stepper;
+	
+	[SerializeField]
+	private Button playmonster;
+	
+	[SerializeField]
+	private Button oakley;
+	
+	[SerializeField]
+	private Button masaki;
+	
+	[SerializeField]
+	private Button front;
+	
+	[SerializeField]
+	private Button emporio;
+	
+	[SerializeField]
+	private Button silhouette;
+	
+
+    // Update is called once per frame
+    void Update()
+    {
+		tomford.gameObject.SetActive(false);
+		stepper.gameObject.SetActive(false);
+		playmonster.gameObject.SetActive(false);
+		oakley.gameObject.SetActive(false);
+		masaki.gameObject.SetActive(false);
+		front.gameObject.SetActive(false);
+		emporio.gameObject.SetActive(false);
+		silhouette.gameObject.SetActive(false);
+		
+        if(searchInput.text == "Tom Ford" || searchInput.text == "tom ford") {
+			tomford.gameObject.SetActive(true);
+		} else if (searchInput.text == "Stepper" || searchInput.text == "stepper"){
+			stepper.gameObject.SetActive(true);
+		} else if (searchInput.text == "Playmonster") {
+			playmonster.gameObject.SetActive(true);
+		} else if (searchInput.text == "Silhouette") {
+			silhouette.gameObject.SetActive(true);
+		} else if (searchInput.text == "Oakley") {
+			oakley.gameObject.SetActive(true);
+		} else if (searchInput.text == "Masaki") {
+			masaki.gameObject.SetActive(true);
+		} else if (searchInput.text == "Front") {
+			front.gameObject.SetActive(true);
+		} else if (searchInput.text == "Emporio Armani"){
+			emporio.gameObject.SetActive(true);
+		} else if (searchInput.text == "") {
+			tomford.gameObject.SetActive(true);
+			stepper.gameObject.SetActive(true);
+			playmonster.gameObject.SetActive(true);
+			oakley.gameObject.SetActive(true);
+			masaki.gameObject.SetActive(true);
+			front.gameObject.SetActive(true);
+			emporio.gameObject.SetActive(true);
+			silhouette.gameObject.SetActive(true);
+		} else {
+			tomford.gameObject.SetActive(false);
+			stepper.gameObject.SetActive(false);
+			playmonster.gameObject.SetActive(false);
+			oakley.gameObject.SetActive(false);
+			masaki.gameObject.SetActive(false);
+			front.gameObject.SetActive(false);
+			emporio.gameObject.SetActive(false);
+			silhouette.gameObject.SetActive(false);
+		}
+    }
+}
